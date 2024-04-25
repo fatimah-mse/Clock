@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock</title>
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="./assets/style/all.min.css">
+        <link rel="stylesheet" href="./assets/style/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/style/style.css">
+
+    </head>
+
+    <body>
+
+        <main>
+
+            <!-- Switch Clock -->
+            <div class="switch position-fixed d-flex justify-content-center align-items-cente">
+                <p class="fw-bold fs-5 text-white m-0 me-2">Analog</p>
+                <div class="form-check form-switch ms-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onchange="switch_clock()">
+                </div>
+                <p class="fw-bold fs-5 text-white m-0 ms-2">Digital</p>
+                  
+            </div>
+
+            <!-- Analog Clock -->
+            <section class="analog container h-100 justify-content-center align-items-cente" id="analog-clock">
+                <div class="d-flex justify-content-center align-items-center h-100 position-relative">
+                    <div class="clock position-relative d-flex justify-content-center align-items-center shadow">
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:1"><span>1</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:2"><span>2</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:3"><span>3</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:4"><span>4</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:5"><span>5</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:6"><span>6</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:7"><span>7</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:8"><span>8</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:9"><span>9</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:10"><span>10</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:11"><span>11</span></div>
+                        <div class="number position-absolute text-center text-primary fw-bold fs-3" style="--n:12"><span>12</span></div>
+                        <div class="hour position-absolute rounded shadow" id="h"></div>
+                        <div class="minute position-absolute rounded shadow" id="min"></div>
+                        <div class="second position-absolute rounded shadow bg-warning" id="sec"></div>
+                        <div class="dot position-absolute bg-primary"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Digital Clock -->
+            <section class="digital container h-100 justify-content-center align-items-cente" id="digital-clock">
+                <div class="d-flex justify-content-center align-items-center h-100 position-relative">
+                    <div class="clock position-relative d-flex justify-content-evenly align-items-center rounded shadow pb-4">
+                        <span class="text-primary position-relative" id="hrs" data-work="hours">00</span>
+                        <span class="text-primary position-relative">:</span>
+                        <span class="text-primary position-relative" id="mins" data-work="minutes">00</span>
+                        <span class="text-primary position-relative">:</span>
+                        <span class="text-primary position-relative" id="secs" data-work="seconds">00</span>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        
+        <!-- JS Files -->
+        <script src="./assets/js/all.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+
+</html>
